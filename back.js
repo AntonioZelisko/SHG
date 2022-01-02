@@ -22,7 +22,11 @@ launch.addEventListener("click", () => {
    // if ((card[j].innerHTML = deckc[rand])) {
       for (i = 0; i < deckc.length; i++) {
         if (deckc[i] == deckc[rand]) {
-          deckc.splice(deckc[rand], 0);
+        //  deckc.replace(deckc[rand]-1)
+          if (deckc[rand]===undefined){
+            deckc.splice(0,1);
+          }
+        //  deckc.splice(0,1);
         }
      // }
       // return j+1
