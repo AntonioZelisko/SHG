@@ -14,23 +14,38 @@ del.addEventListener("click", () => {
   card[0].innerHTML = deck;
 });
 
-launch.addEventListener("click", () => {
+/*function gener(deckc){
   const deckc = deck;
   for (j = 1; j < card.length; j++) {
     const rand = Math.floor(Math.random() * deckc.length);
     card[j].innerHTML = deckc[rand];
+    deckc.splice(rand,1);
+  }
+}
+*/
+launch.addEventListener("click", () => {
+ // gener(deckc);
+  const deckc = deck;
+  for (j = 1; j < card.length; j++) {
+    const rand = Math.floor(Math.random() * deckc.length);
+    card[j].innerHTML = deckc[rand];
+    deckc.splice(rand,1);
+   /* if (card[0] == undefined){
+    if (card[card.length-1]==true){
+     return deckc = deck;
+    } */
    // if ((card[j].innerHTML = deckc[rand])) {
-      for (i = 0; i < deckc.length; i++) {
-        if (deckc[i] == deckc[rand]) {
-        //  deckc.replace(deckc[rand]-1)
-          if (deckc[rand]===undefined){
+     /* for (i = 0; i < deckc.length; i++) {
+       if (deckc[i] == deckc[rand]) {
+          deckc.replace(deckc[rand]-1)
+         if (deckc[rand]===undefined){
             deckc.splice(0,1);
           }
         //  deckc.splice(0,1);
         }
      // }
-      // return j+1
-    }
+      // return j+1*/
+    
     //deckc.splice(deckc[rand],deckc[i])
     // deckc.delete(deckc[rand])
     /*for (i = 0; i < deckc.length; i++) {
@@ -38,8 +53,9 @@ launch.addEventListener("click", () => {
       if ((deckc[i] == deckc[rand])) {
         
        // deckc.splice(deckc[rand],deckc[i]);
-      } }*/
-  }
+      } } */
+}
+  
 
   /*for (let i=0;i<deck.length;i++){
   if(deck[i]=rand){
@@ -69,8 +85,13 @@ launch.addEventListener("click", () => {
     ];
 
   card[4].innerHTML = deckc[Math.floor(Math.random() * deckc.length)];*/
-  return (deckc = deck);
+
 });
+/*
+if (gener(deckc)=true){
+return deckc = deck;
+}
+*/
 //deck.push(input);
 /*"BE alt",
     "BE",
@@ -93,4 +114,4 @@ launch.addEventListener("click", () => {
     "karma cut",
     "providence",
     */
-// crééer deux bouces for, un comportants les inner et l'autre les randoms, modifier for et méthode de suppression
+// rmettre à zero l'array à la fin du addevent
